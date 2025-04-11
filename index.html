@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals For Life - Healthy Eating Made Simple</title>
+    <style>
+        :root {
+            --primary-blue: #1e88e5;
+            --secondary-blue: #64b5f6;
+            --light-blue: #e3f2fd;
+            --dark-blue: #1565c0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-blue);
+        }
+
+        .hero {
+            background-color: var(--light-blue);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background-color: var(--light-blue);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Meals For Life</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Healthy Eating Made Simple</h1>
+        <p>Discover nutritious and delicious meal plans that will transform your life. Start your journey to better health today.</p>
+        <a href="meal-plans.html" class="cta-button">Get Started</a>
+    </section>
+
+    <section class="features">
+        <a href="meal-plans.html" class="feature-card">
+            <h3>Custom Meal Plans</h3>
+            <p>Personalized meal plans tailored to your dietary needs and preferences.</p>
+        </a>
+        <a href="recipes.html" class="feature-card">
+            <h3>Healthy Recipes</h3>
+            <p>Access to hundreds of nutritious and delicious recipes for every occasion.</p>
+        </a>
+        <a href="nutrition.html" class="feature-card">
+            <h3>Nutrition Guidance</h3>
+            <p>Expert advice on maintaining a balanced and healthy diet.</p>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meals For Life. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
