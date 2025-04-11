@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Guidance - Meals For Life</title>
+    <style>
+        :root {
+            --primary-blue: #1e88e5;
+            --secondary-blue: #64b5f6;
+            --light-blue: #e3f2fd;
+            --dark-blue: #1565c0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-blue);
+        }
+
+        .page-header {
+            background-color: var(--light-blue);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .nutrition-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .nutrition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .nutrition-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .nutrition-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .nutrition-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .nutrition-card ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .nutrition-card li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .nutrition-card li::before {
+            content: "•";
+            color: var(--primary-blue);
+            position: absolute;
+            left: 0;
+        }
+
+        .resources {
+            background-color: var(--light-blue);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .resources h2 {
+            color: var(--dark-blue);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .resource-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .resource-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .resource-item h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-link {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .resource-link:hover {
+            background-color: var(--dark-blue);
+        }
+
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Meals For Life</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Nutrition Guidance</h1>
+        <p>Expert advice and resources for maintaining a healthy diet</p>
+    </section>
+
+    <section class="nutrition-content">
+        <div class="nutrition-grid">
+            <div class="nutrition-card">
+                <h3>Balanced Nutrition</h3>
+                <p>Learn about the essential components of a balanced diet:</p>
+                <ul>
+                    <li>Proteins</li>
+                    <li>Carbohydrates</li>
+                    <li>Healthy Fats</li>
+                    <li>Vitamins & Minerals</li>
+                    <li>Fiber</li>
+                </ul>
+            </div>
+
+            <div class="nutrition-card">
+                <h3>Portion Control</h3>
+                <p>Understanding proper portion sizes:</p>
+                <ul>
+                    <li>Visual portion guides</li>
+                    <li>Mindful eating practices</li>
+                    <li>Meal timing</li>
+                    <li>Hunger cues</li>
+                    <li>Plate composition</li>
+                </ul>
+            </div>
+
+            <div class="nutrition-card">
+                <h3>Special Diets</h3>
+                <p>Information about different dietary needs:</p>
+                <ul>
+                    <li>Vegetarian</li>
+                    <li>Vegan</li>
+                    <li>Gluten-Free</li>
+                    <li>Low-Carb</li>
+                    <li>Mediterranean</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="resources">
+            <h2>Nutrition Resources</h2>
+            <div class="resource-list">
+                <div class="resource-item">
+                    <h3>Nutrition Calculator</h3>
+                    <p>Calculate your daily nutritional needs based on your age, weight, and activity level.</p>
+                    <a href="calculator.html" class="resource-link">Try Calculator</a>
+                </div>
+
+                <div class="resource-item">
+                    <h3>Meal Planning Guide</h3>
+                    <p>Learn how to plan your meals for the week with our comprehensive guide.</p>
+                    <a href="meal-planning-guide.html" class="resource-link">Read Guide</a>
+                </div>
+
+                <div class="resource-item">
+                    <h3>Nutrition Blog</h3>
+                    <p>Stay updated with the latest nutrition tips and research.</p>
+                    <a href="blog.html" class="resource-link">Visit Blog</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meals For Life. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

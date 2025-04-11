@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes - Meals For Life</title>
+    <style>
+        :root {
+            --primary-blue: #1e88e5;
+            --secondary-blue: #64b5f6;
+            --light-blue: #e3f2fd;
+            --dark-blue: #1565c0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--light-blue);
+        }
+
+        .page-header {
+            background-color: var(--light-blue);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .filters {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-blue);
+            border-radius: 20px;
+            background: none;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .recipes {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-blue);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+        }
+
+        .recipe-title {
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .view-recipe {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .view-recipe:hover {
+            background-color: var(--dark-blue);
+        }
+
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Meals For Life</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="meal-plans.html">Meal Plans</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Healthy Recipes</h1>
+        <p>Discover delicious and nutritious recipes for every occasion</p>
+    </section>
+
+    <div class="filters">
+        <button class="filter-button active">All</button>
+        <button class="filter-button">Breakfast</button>
+        <button class="filter-button">Lunch</button>
+        <button class="filter-button">Dinner</button>
+        <button class="filter-button">Vegetarian</button>
+        <button class="filter-button">Vegan</button>
+        <button class="filter-button">Low Carb</button>
+    </div>
+
+    <section class="recipes">
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <div class="recipe-image" style="background-image: url('https://source.unsplash.com/random/400x300/?healthy-breakfast')"></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Quinoa Breakfast Bowl</h3>
+                    <div class="recipe-info">
+                        <span>15 mins</span>
+                        <span>320 calories</span>
+                    </div>
+                    <p>A protein-rich breakfast bowl with fresh fruits and nuts.</p>
+                    <a href="recipe-details.html?id=quinoa-breakfast" class="view-recipe">View Recipe</a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image" style="background-image: url('https://source.unsplash.com/random/400x300/?healthy-lunch')"></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Mediterranean Salad</h3>
+                    <div class="recipe-info">
+                        <span>20 mins</span>
+                        <span>280 calories</span>
+                    </div>
+                    <p>Fresh vegetables with olive oil and feta cheese.</p>
+                    <a href="recipe-details.html?id=mediterranean-salad" class="view-recipe">View Recipe</a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image" style="background-image: url('https://source.unsplash.com/random/400x300/?healthy-dinner')"></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Grilled Salmon</h3>
+                    <div class="recipe-info">
+                        <span>25 mins</span>
+                        <span>420 calories</span>
+                    </div>
+                    <p>Grilled salmon with roasted vegetables.</p>
+                    <a href="recipe-details.html?id=grilled-salmon" class="view-recipe">View Recipe</a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image" style="background-image: url('https://source.unsplash.com/random/400x300/?vegetarian')"></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Vegetable Stir-Fry</h3>
+                    <div class="recipe-info">
+                        <span>20 mins</span>
+                        <span>250 calories</span>
+                    </div>
+                    <p>Colorful vegetables in a savory sauce.</p>
+                    <a href="recipe-details.html?id=vegetable-stir-fry" class="view-recipe">View Recipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meals For Life. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,18 @@
+name = "meals-for-life-api"
+main = "index.js"
+compatibility_date = "2023-10-30"
+
+[vars]
+API_URL = "https://api.mealsforlife.com"
+
+# Add your environment variables here
+# [vars]
+# MONGODB_URI = ""
+# JWT_SECRET = ""
+# GEMINI_API_KEY = ""
+
+# Add your D1 database binding if you're using Cloudflare D1
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "meals_for_life"
+# database_id = "" 

@@ -1,0 +1,62 @@
+<script type="module">
+    import GeminiAPI from './js/gemini-api.js';
+    import CookieManager from './js/cookie-utils.js';
+
+    // Load saved user data if it exists
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedUserData = CookieManager.getUserData();
+        if (savedUserData) {
+            // Populate form fields with saved data
+            Object.keys(savedUserData).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.value = savedUserData[key];
+                }
+            });
+        }
+    });
+
+    document.getElementById('payment-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        document.getElementById('loading-section').style.display = 'flex';
+        document.getElementById('payment-section').style.display = 'none';
+        
+        try {
+            // Get form data
+            const userData = {
+                name: document.getElementById('name').value,
+                age: document.getElementById('age').value,
+                gender: document.getElementById('gender').value,
+                currentWeight: document.getElementById('current-weight').value,
+                goalWeight: document.getElementById('goal-weight').value,
+                weightGoal: document.getElementById('weight-goal').value,
+                activityLevel: document.getElementById('activity-level').value,
+                dietType: document.getElementById('diet-type').value,
+                allergies: document.getElementById('allergies').value,
+                weeklyBudget: document.getElementById('weekly-budget').value
+            };
+
+            // Save user data to cookies
+            CookieManager.saveUserData(userData);
+
+            // Initialize Gemini API
+            const geminiAPI = new GeminiAPI();
+            
+            // Generate meal plan
+            const mealPlan = await geminiAPI.generateMealPlan(userData);
+            
+            // Save meal plan to cookies
+            CookieManager.saveMealPlan(mealPlan);
+            
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was an error generating your meal plan. Please try again.');
+            document.getElementById('loading-section').style.display = 'none';
+            document.getElementById('payment-section').style.display = 'block';
+        }
+    });
+</script>
